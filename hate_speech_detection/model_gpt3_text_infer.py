@@ -37,17 +37,35 @@ class GPT3TextInference(ClassifierModel):
             frequency_penalty=0,
             presence_penalty=0
         )
-        print(f'response = {response}')
         classification = str(response.choices[0].text.strip())
         print(classification)
-        if classification.lower() in ['yes']:
-            return True, self.hate_word_count(sentence)
+        if 'yes' in classification.lower():
+            return True
+        else:
+            return False
+
+    def detect_social_bias(self, sentence):
+        # Classify the sentence as either hate speech or not hate speech using GPT-3
+        prompt = f"Is following sentence targeting any social group, nation, race, ethnicity, gender, religion ? reply in yes or no :\n{sentence}\n"
+        print(f'prompt = {prompt}')
+        response = openai.Completion.create(
+            engine="text-davinci-002",
+            prompt=prompt,
+            temperature=0.1,
+            max_tokens=128,  # Increase max_tokens to include the entire classification
+            top_p=1,
+            frequency_penalty=0,
+            presence_penalty=0
+        )
+        classification = str(response.choices[0].text.strip())
+        print(classification)
+        if 'yes' in classification.lower():
+            return True
         else:
             return False
 
     def predict(self, inputs):
         if np.isscalar(inputs):
-            return self.detect_hate_speech(inputs), False
+            return self.detect_hate_speech(inputs), self.detect_social_bias(inputs)
         else:
-            return [self.detect_hate_speech(inp) for inp in inputs], False
-        # Detect hate speech in the input sentence using the detect_hate_speech function
+            return [self.detect_hate_speech(inp) for inp in inputs], [self.detect_social_bias(inp) for inp in inputs]
