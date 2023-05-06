@@ -15,5 +15,5 @@ def test_models():
 def test_models_working():
     print("test_models_working**")
     for k in models.keys():
-        print(models[k].predict(*["I hate my  haters", "I hate muslims"]))
+        print(models[k].predict(["I hate my  haters", "I hate muslims"]))
     assert 1 == 1
