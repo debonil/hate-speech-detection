@@ -1,19 +1,15 @@
 
-## A Machine Learning Approach to Improve the Detection of CI Skip Commits
+## A Hate Speech and Social Bias detection model
 
 CSL7030 | DLOps 22-23 Sem II | Term Project
 
 **Paper:** 
 
-R. Abdalkareem, S. Mujahid and E. Shihab, "A Machine Learning Approach to Improve the Detection of CI Skip Commits," in IEEE Transactions on Software Engineering, vol. 47, no. 12, pp. 2740-2754, 1 Dec. 2021, doi: 10.1109/TSE.2020.2967380.
-
-Ref : https://ieeexplore.ieee.org/abstract/document/8961089
+TBD
 
 **Brief Description:**
 
-In today's world going to market faster is extremly important and if we are not able to do so becuase of running longer and longer pipeline cycles for small & small changes in UI or some very minor bug fixes. The paper has tried to solve this problem by using Decision Tree algorithm of Machine Learning. Since this is extremly desired in today's world to make CI-CD pipleine more intelligent that they do not just follow a scheuld or they do not just follow a trigger of push & merge but they be more intelligent and to make them intelligent we have to use AI\ML but in this paper they have used Decision Tree but we think that if we use some other Model which are more efficient in processing human language then may be we can improve the solution proposed in this paper.
-
-
+TBD
 
 ## Authors
 - [Debonil Ghosh	[M21AIE225] ](https://www.github.com/debonil)
@@ -24,9 +20,6 @@ In today's world going to market faster is extremly important and if we are not 
 
 ## Demo
 
-https://youtu.be/5iA4ZghTVS0
-
-https://youtu.be/MzQAmS6U23k
 
 
 ## Usage
@@ -38,6 +31,8 @@ https://youtu.be/MzQAmS6U23k
 
 
 ## Results
+
+(sample only)
 
 **Detailed Classifier Accuracy summary**
 |Classifier         |Mean       |Median     |Max  |Min        |Standard Deviation|
