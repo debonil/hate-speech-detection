@@ -1,12 +1,19 @@
-from skip_commit import data_prep, ml_training
+from hate_speech_detection import model_gpt2, train_bert
+from hate_speech_detection.models import models
 
 
 def test_example():
     assert 1 == 1
 
 
-def test_basic_working():
-    print("test_basic_working**")
-    print(data_prep.api_token)
-    ml_training.do()
+def test_models():
+    print("test_models**")
+    print(models)
+    assert 1 == 1
+
+
+def test_models_working():
+    print("test_models_working**")
+    for k in models.keys():
+        print(models[k].predict(*["I hate my  haters", "I hate muslims"]))
     assert 1 == 1
