@@ -1,0 +1,43 @@
+diff --git a/notebooks/data_prep.ipynb b/notebooks/data_prep.ipynb
+index a89390c..7702409 100644
+--- a/notebooks/data_prep.ipynb
++++ b/notebooks/data_prep.ipynb
+@@ -1,5 +1,29 @@
+ {
+  "cells": [
++  {
++   "cell_type": "code",
++   "execution_count": 1,
++   "metadata": {},
++   "outputs": [],
++   "source": [
++    "import openai\n",
++    "import wandb\n",
++    "from pathlib import Path\n",
++    "import pandas as pd\n",
++    "import numpy as np\n",
++    "import json\n",
++    "from tqdm import tqdm"
++   ]
++  },
++  {
++   "cell_type": "code",
++   "execution_count": null,
++   "metadata": {},
++   "outputs": [],
++   "source": [
++    "!openai wandb sync"
++   ]
++  },
+   {
+    "cell_type": "code",
+    "execution_count": 6,
+@@ -21,7 +45,7 @@
+     "\n",
+     "file_types = ['trn', 'dev', 'tst']\n",
+     "for f in file_types:\n",
+-    "    src_data_df = pd.read_csv(f'../data/SBIC.v2.agg.{f}.csv').sample(frac=0.01)\n",
++    "    src_data_df = pd.read_csv(f'../data/SBIC.v2.agg.{f}.csv').sample(frac=0.05)\n",
+     "    result_df = pd.DataFrame()\n",
+     "\n",
+     "    result_df['prompt'] = src_data_df['post'].apply(lambda x: str(x)+'\\n\\n###\\n\\n')\n",

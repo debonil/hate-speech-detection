@@ -1,0 +1,98 @@
+wandb_version: 1
+
+object:
+  desc: null
+  value: fine-tune
+id:
+  desc: null
+  value: ft-u3oC6MarWll2btewysd1wTI8
+hyperparams:
+  desc: null
+  value:
+    n_epochs: 4
+    batch_size: 2
+    prompt_loss_weight: 0.01
+    learning_rate_multiplier: 0.1
+    classification_positive_class: ' 1'
+    compute_classification_metrics: true
+organization_id:
+  desc: null
+  value: org-WuFLwmy1CYht2uDwZu37mDlB
+model:
+  desc: null
+  value: davinci
+training_files:
+  desc: null
+  value:
+    object: file
+    id: file-Jt7FOKBRqfEIdnqo7mg1XHyn
+    purpose: fine-tune
+    filename: data/SBIC.v2.agg.trn.tiny.promted_prepared.jsonl
+    bytes: 273184
+    created_at: 1683459234
+    status: processed
+    status_details: null
+validation_files:
+  desc: null
+  value:
+    object: file
+    id: file-ouvz5dmH44H6VbsCCPwjxVH1
+    purpose: fine-tune
+    filename: data/SBIC.v2.agg.dev.tiny.promted_prepared.jsonl
+    bytes: 37415
+    created_at: 1683459238
+    status: processed
+    status_details: null
+result_files:
+  desc: null
+  value:
+    object: file
+    id: file-xvhuT8hu0ImxjanYFAuOMDyv
+    purpose: fine-tune-results
+    filename: compiled_results.csv
+    bytes: 202303
+    created_at: 1683462870
+    status: processed
+    status_details: null
+created_at:
+  desc: null
+  value: '2023-05-07T17:03:58'
+updated_at:
+  desc: null
+  value: 1683462871
+status:
+  desc: null
+  value: succeeded
+fine_tuned_model:
+  desc: null
+  value: davinci:ft-personal-2023-05-07-12-34-28
+_wandb:
+  desc: null
+  value:
+    python_version: 3.10.7
+    cli_version: 0.15.2
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1683463401.710644
+    t:
+      1:
+      - 55
+      2:
+      - 55
+      3:
+      - 2
+      - 13
+      - 14
+      - 16
+      - 23
+      4: 3.10.7
+      5: 0.15.2
+      8:
+      - 3
+      - 5
+n_train:
+  desc: null
+  value: 1771
+n_valid:
+  desc: null
+  value: 233
