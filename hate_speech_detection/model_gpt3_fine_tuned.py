@@ -3,43 +3,26 @@ import numpy as np
 from hate_speech_detection.classifier_model import ClassifierModel
 
 
-class GPT3TextInference(ClassifierModel):
+class GPT3FinedTunedInference(ClassifierModel):
     def __init__(self):
-        super(GPT3TextInference, self).__init__()
-
-    # Define the function to detect hate speech
-    def hate_word_count(self, sentence):
-        # Extract the hate speech words using regular expressions
-        # hate_speech_words = re.findall(r"\b(?!not\b)\w+", sentence.lower())
-        hate_speech_words = ["nigger", "nigga", "negro", "muslim", "Black", "whore", "fuck", "cuck", "terrorist",
-                             "asshole", "cunt", "fucker", "kill", "bomb", "shoot", "commies", "leftist", "trump", "white", "blonde", "dead"]
-        num_words = 0
-        for word in sentence.split():
-            if word.lower() in hate_speech_words:
-                num_words += 1
-
-        # num_words = len(hate_speech_words)
-        total_words = len(sentence.split())
-        percentage = num_words / total_words * 100
-        return percentage
+        super(GPT3FinedTunedInference, self).__init__()
+        self.ft_model = 'ada:ft-personal-2023-05-07-05-33-03'
     # Define the function to detect hate speech
 
     def detect_hate_speech(self, sentence):
         # Classify the sentence as either hate speech or not hate speech using GPT-3
-        prompt = f"Is it Hate speech ? reply in yes or no :\n{sentence}\n"
+        prompt = f"{sentence}\n\n###\n\n"
         print(f'prompt = {prompt}')
         response = openai.Completion.create(
-            engine="text-davinci-002",
+            model=self.ft_model,
             prompt=prompt,
             temperature=0,
-            max_tokens=5,  # Increase max_tokens to include the entire classification
-            top_p=1,
-            frequency_penalty=0,
-            presence_penalty=0
+            max_tokens=1,  # Increase max_tokens to include the entire classification
         )
+        # print(f'response={response}')
         classification = str(response.choices[0].text.strip())
-        print(classification)
-        if 'yes' in classification.lower():
+        print(f'classification={classification}')
+        if '1' in classification:
             return True
         else:
             return False
@@ -57,8 +40,9 @@ class GPT3TextInference(ClassifierModel):
             frequency_penalty=0,
             presence_penalty=0
         )
+        # print(f'response={response}')
         classification = str(response.choices[0].text.strip())
-        print(classification)
+        print(f'classification={classification}')
         if 'yes' in classification.lower():
             return True
         else:
