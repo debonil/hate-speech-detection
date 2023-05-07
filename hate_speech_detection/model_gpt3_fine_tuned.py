@@ -6,7 +6,7 @@ from hate_speech_detection.classifier_model import ClassifierModel
 class GPT3FinedTunedInference(ClassifierModel):
     def __init__(self):
         super(GPT3FinedTunedInference, self).__init__()
-        self.ft_model = 'ada:ft-personal-2023-05-07-05-33-03'
+        self.ft_model = 'davinci:ft-personal-2023-05-07-12-34-28'
     # Define the function to detect hate speech
 
     def detect_hate_speech(self, sentence):
