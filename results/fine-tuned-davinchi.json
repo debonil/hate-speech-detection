@@ -1,0 +1,110 @@
+{
+  "object": "fine-tune",
+  "id": "ft-u3oC6MarWll2btewysd1wTI8",
+  "hyperparams": {
+    "n_epochs": 4,
+    "batch_size": 2,
+    "prompt_loss_weight": 0.01,
+    "learning_rate_multiplier": 0.1,
+    "classification_positive_class": " 1",
+    "compute_classification_metrics": true
+  },
+  "organization_id": "org-WuFLwmy1CYht2uDwZu37mDlB",
+  "model": "davinci",
+  "training_files": [
+    {
+      "object": "file",
+      "id": "file-Jt7FOKBRqfEIdnqo7mg1XHyn",
+      "purpose": "fine-tune",
+      "filename": "data/SBIC.v2.agg.trn.tiny.promted_prepared.jsonl",
+      "bytes": 273184,
+      "created_at": 1683459234,
+      "status": "processed",
+      "status_details": null
+    }
+  ],
+  "validation_files": [
+    {
+      "object": "file",
+      "id": "file-ouvz5dmH44H6VbsCCPwjxVH1",
+      "purpose": "fine-tune",
+      "filename": "data/SBIC.v2.agg.dev.tiny.promted_prepared.jsonl",
+      "bytes": 37415,
+      "created_at": 1683459238,
+      "status": "processed",
+      "status_details": null
+    }
+  ],
+  "result_files": [
+    {
+      "object": "file",
+      "id": "file-xvhuT8hu0ImxjanYFAuOMDyv",
+      "purpose": "fine-tune-results",
+      "filename": "compiled_results.csv",
+      "bytes": 202303,
+      "created_at": 1683462870,
+      "status": "processed",
+      "status_details": null
+    }
+  ],
+  "created_at": 1683459238,
+  "updated_at": 1683462871,
+  "status": "succeeded",
+  "fine_tuned_model": "davinci:ft-personal-2023-05-07-12-34-28",
+  "events": [
+    {
+      "object": "fine-tune-event",
+      "level": "info",
+      "message": "Created fine-tune: ft-u3oC6MarWll2btewysd1wTI8",
+      "created_at": 1683459238
+    },
+    {
+      "object": "fine-tune-event",
+      "level": "info",
+      "message": "Fine-tune costs $6.96",
+      "created_at": 1683459257
+    },
+    {
+      "object": "fine-tune-event",
+      "level": "info",
+      "message": "Fine-tune enqueued. Queue number: 0",
+      "created_at": 1683459257
+    },
+    {
+      "object": "fine-tune-event",
+      "level": "info",
+      "message": "Fine-tune started",
+      "created_at": 1683459259
+    },
+    {
+      "object": "fine-tune-event",
+      "level": "info",
+      "message": "Completed epoch 1/4",
+      "created_at": 1683460213
+    },
+    {
+      "object": "fine-tune-event",
+      "level": "info",
+      "message": "Completed epoch 3/4",
+      "created_at": 1683461949
+    },
+    {
+      "object": "fine-tune-event",
+      "level": "info",
+      "message": "Uploaded model: davinci:ft-personal-2023-05-07-12-34-28",
+      "created_at": 1683462869
+    },
+    {
+      "object": "fine-tune-event",
+      "level": "info",
+      "message": "Uploaded result file: file-xvhuT8hu0ImxjanYFAuOMDyv",
+      "created_at": 1683462871
+    },
+    {
+      "object": "fine-tune-event",
+      "level": "info",
+      "message": "Fine-tune succeeded",
+      "created_at": 1683462871
+    }
+  ]
+}
