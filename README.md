@@ -17,9 +17,9 @@ In addition to the paper implementation, we ahave added one **GPT3 finetuned dav
 
 ## Authors
 
-- [Debonil Ghosh [M21AIE225] ](https://www.github.com/debonil)
-- [Saurav Chowdhury [M21AIE256] ](https://www.github.com/sauraviitj)
-- [Ravi Shankar Kumar [M21AIE247]](https://www.github.com/rsk-iitj)
+- [Debonil Ghosh [M21AIE225] ](<https://www.github.com/debonil>)
+- [Saurav Chowdhury [M21AIE256] ](<https://www.github.com/sauraviitj>)
+- [Ravi Shankar Kumar [M21AIE247]](<https://www.github.com/rsk-iitj>)
 
 ## Usage
 
@@ -31,16 +31,18 @@ In addition to the paper implementation, we ahave added one **GPT3 finetuned dav
 
     4. streamlit run streamlit_app/app.py
 
-## Results
+## Results of GPT3 Fine Tuned model
 
-| Metric                   | Score    |
-|:-------------------------|---------:|
-| classification/accuracy  | 0.811159 |
-| classification/precision | 0.809917 |
-| classification/recall    | 0.823529 |
-| classification/auroc     | 0.859539 |
-| classification/auprc     | 0.856152 |
-| classification/f1.0      | 0.816667 |
+Accuracy: **89.362%**
+
+F1 Score: **89.383%**
+
+**Classwise Accuracy Score:**
+|     Hate |   Non-Hate |
+|---------:|-----------:|
+| 0.903846 |   0.885496 |
+
+![confusion_matrix](results/confusion_mat_GPT3%20Fine%20tune.png)
 
 ## Demo
 
