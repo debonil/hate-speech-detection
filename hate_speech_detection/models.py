@@ -7,6 +7,6 @@ from hate_speech_detection.model_gpt3_text_infer import GPT3TextInference
 
 models = {
     "Bert": BertBasedClassifer(),
-    "GPT-3": GPT3TextInference(),
+    "GPT-3 Zero Shot": GPT3TextInference(),
     "GPT-3 FineTuned": GPT3FinedTunedInference(),
 }

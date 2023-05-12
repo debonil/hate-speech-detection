@@ -44,6 +44,14 @@ F1 Score: **89.383%**
 
 ![confusion_matrix](results/confusion_mat_GPT3%20Fine%20tune.png)
 
+## Comaprison of three models
+
+| Model           |   Accuracy |   F1 Score |   Precision |   Recall |   ROC AUC Score |
+|:----------------|-----------:|-----------:|------------:|---------:|----------------:|
+| Bert            |   0.702128 |   0.701038 |    0.722628 | 0.755725 |        0.69517  |
+| GPT-3 Zero Shot |   0.608511 |   0.580911 |    0.854545 | 0.358779 |        0.640928 |
+| GPT-3 FineTuned |   0.889362 |   0.889616 |    0.92     | 0.877863 |        0.890854 |
+
 ## Demo
 
 ![gpt3_finetuned_english_churchil](results/streamlit_gpt3_finetuned_english_churchil.PNG?raw=true)

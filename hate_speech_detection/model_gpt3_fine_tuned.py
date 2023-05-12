@@ -28,6 +28,7 @@ class GPT3FinedTunedInference(ClassifierModel):
             return False
 
     def detect_social_bias(self, sentence):
+        return False
         # Classify the sentence as either hate speech or not hate speech using GPT-3
         prompt = f"Is following sentence targeting any social group, nation, race, ethnicity, gender, religion ? reply in yes or no :\n{sentence}\n"
         print(f'prompt = {prompt}')
