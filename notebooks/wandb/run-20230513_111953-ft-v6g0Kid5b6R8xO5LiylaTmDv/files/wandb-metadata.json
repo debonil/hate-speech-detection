@@ -1,0 +1,44 @@
+{
+    "os": "Windows-10-10.0.19045-SP0",
+    "python": "3.10.7",
+    "heartbeatAt": "2023-05-13T05:49:54.996609",
+    "startedAt": "2023-05-13T05:49:53.717053",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "wandb",
+        "sync"
+    ],
+    "state": "running",
+    "program": "-m __main__",
+    "git": {
+        "remote": "https://github.com/debonil/hate-speech-detection.git",
+        "commit": "fcdb63eced139901ae7a4ffbc6d252a617f7efa4"
+    },
+    "email": "debonil.ghosh@gmail.com",
+    "root": "G:/MTechClasses/DL-Ops/Project/hate-speech-detection",
+    "host": "LAPTOP-44VCHRFA",
+    "username": "debon",
+    "executable": "C:\\Users\\debon\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+    "cpu_count": 4,
+    "cpu_count_logical": 8,
+    "cpu_freq": {
+        "current": 2419.0,
+        "min": 0.0,
+        "max": 2419.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2419.0,
+            "min": 0.0,
+            "max": 2419.0
+        }
+    ],
+    "disk": {
+        "total": 99.99901962280273,
+        "used": 65.08887100219727
+    },
+    "memory": {
+        "total": 7.788383483886719
+    }
+}

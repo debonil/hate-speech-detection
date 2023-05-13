@@ -1,0 +1,108 @@
+{
+  "object": "fine-tune",
+  "id": "ft-v6g0Kid5b6R8xO5LiylaTmDv",
+  "hyperparams": {
+    "n_epochs": 2,
+    "batch_size": 2,
+    "prompt_loss_weight": 0.01,
+    "learning_rate_multiplier": 0.05
+  },
+  "organization_id": "org-WuFLwmy1CYht2uDwZu37mDlB",
+  "model": "curie",
+  "training_files": [
+    {
+      "object": "file",
+      "id": "file-8rseY2ZhNO5xbQki5SUAHveC",
+      "purpose": "fine-tune",
+      "filename": "data/SBIC.v2.agg.trn.tiny.social-bias.promted_prepared.jsonl",
+      "bytes": 291534,
+      "created_at": 1683954564,
+      "status": "processed",
+      "status_details": null
+    }
+  ],
+  "validation_files": [
+    {
+      "object": "file",
+      "id": "file-52QkjLqLHKpwVYvCrSPD7Tz6",
+      "purpose": "fine-tune",
+      "filename": "data/SBIC.v2.agg.dev.tiny.social-bias.promted_prepared.jsonl",
+      "bytes": 37908,
+      "created_at": 1683954566,
+      "status": "processed",
+      "status_details": null
+    }
+  ],
+  "result_files": [
+    {
+      "object": "file",
+      "id": "file-F3oFRj9cQnU7VDRyjkPs81Jc",
+      "purpose": "fine-tune-results",
+      "filename": "compiled_results.csv",
+      "bytes": 104677,
+      "created_at": 1683955800,
+      "status": "processed",
+      "status_details": null
+    }
+  ],
+  "created_at": 1683954567,
+  "updated_at": 1683955800,
+  "status": "succeeded",
+  "fine_tuned_model": "curie:ft-personal-2023-05-13-05-29-59",
+  "events": [
+    {
+      "object": "fine-tune-event",
+      "level": "info",
+      "message": "Created fine-tune: ft-v6g0Kid5b6R8xO5LiylaTmDv",
+      "created_at": 1683954567
+    },
+    {
+      "object": "fine-tune-event",
+      "level": "info",
+      "message": "Fine-tune costs $0.40",
+      "created_at": 1683954585
+    },
+    {
+      "object": "fine-tune-event",
+      "level": "info",
+      "message": "Fine-tune enqueued. Queue number: 1",
+      "created_at": 1683954586
+    },
+    {
+      "object": "fine-tune-event",
+      "level": "info",
+      "message": "Fine-tune is in the queue. Queue number: 0",
+      "created_at": 1683954744
+    },
+    {
+      "object": "fine-tune-event",
+      "level": "info",
+      "message": "Fine-tune started",
+      "created_at": 1683954847
+    },
+    {
+      "object": "fine-tune-event",
+      "level": "info",
+      "message": "Completed epoch 1/2",
+      "created_at": 1683955347
+    },
+    {
+      "object": "fine-tune-event",
+      "level": "info",
+      "message": "Uploaded model: curie:ft-personal-2023-05-13-05-29-59",
+      "created_at": 1683955799
+    },
+    {
+      "object": "fine-tune-event",
+      "level": "info",
+      "message": "Uploaded result file: file-F3oFRj9cQnU7VDRyjkPs81Jc",
+      "created_at": 1683955800
+    },
+    {
+      "object": "fine-tune-event",
+      "level": "info",
+      "message": "Fine-tune succeeded",
+      "created_at": 1683955800
+    }
+  ]
+}
