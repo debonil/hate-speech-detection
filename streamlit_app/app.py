@@ -14,9 +14,8 @@ from hate_speech_detection.models import models
 
 def main():
     st.set_page_config(
-        page_title="Hate Speech and Social Bias Detection", layout="wide")
-    st.title("Hate Speech and Social Bias Detection")
-
+        page_title="Sentiment Analysis using LLMs", layout="wide")
+    st.title("Feedback Analysis using LLMs")
     # Model selection
     model_name = st.sidebar.selectbox("Select a model", list(models.keys()))
 
@@ -28,16 +27,23 @@ def main():
         if user_input:
             model = models[model_name]
 
-            hate_speech_result, social_bias_result = model.predict(user_input)
+            sentiment_result, aspect_result = model.predict(user_input)
 
             # Display results
-            st.write("### Hate Speech Analysis")
+            # st.write("### Hate Speech Analysis")
             st.write(
-                f"Hate speech detected: {'Yes' if hate_speech_result else 'No'}")
+                f"### Sentiment detected: {'Negative' if sentiment_result else 'Positive'}")
 
-            st.write("### Social Bias Analysis")
-            st.write(
-                f"Social bias detected: {'Yes' if social_bias_result else 'No'}")
+            if model_name == 'GPT-3 Zero Shot':
+                st.write("### Aspect Analysis")
+                data = {
+                    'Aspects': list(aspect_result.keys()),
+                    'Age': [25, 30, 22],
+                    'City': ['New York', 'San Francisco', 'Seattle']
+                }
+                st.table(aspect_result)
+            # st.write(
+            #    f"Social bias detected: {'Yes' if social_bias_result else 'No'}")
         else:
             st.error("Please provide input text for analysis.")
 
